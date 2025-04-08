@@ -1,0 +1,82 @@
+git --version
+sudo apt-get install git
+ls
+cd Documents
+mkdir firstProject
+cd firstProject
+nano hello.py
+(print"hello world")
+python3 hello.py
+ls -a
+git init
+git status
+git add hello.py
+git status
+git commit -m "first commit"
+git config --global user.name sandhya
+git config --global user.email sandhya@gmail.com
+git commit -m "first commit"git
+git log
+git status
+git diff
+git show second commit id
+
+git remote -v
+git remote add origin repo.link
+git remote -v
+git push origin master
+...
+(edit in remote repo)
+git pull origin master
+nano hello.py
+git log
+
+
+sudo apt update
+ls
+curl -fsSL https://get.docker.com -o get-docker.sh
+ls
+sudo sh get-docker.sh
+docker --version
+sudo docker images
+sudo docker pull hello-world
+sudo docker images
+sudo docker run hello-world
+sudo docker run -p 80:80 nginx
+sudo docker images
+sudo docker run -p 80:80 -d nginx
+(crt+c to stop)
+sudo docker ps
+sudo docker stop containerID
+
+from flask import Flask, render_template, request
+app=Flask(__name__)
+@app.route("/")
+def home_page(name=None):
+	return render_template("index.html", name=name)
+if __name__='__main__':
+	app.run(host='0.0.0.0', port=5000)
+
+pip -version
+sudo apt install python3-pip
+pip install flask
+python3 app.py
+
+cd pythonproject
+nano Dockerfile
+
+(from python:3-alphine3.15	
+WORKDIR /app
+COPY . /app
+RUN pip install flask
+CMD["python3","app.py"] )
+
+sudo docker build -t myimage:1
+sudo docker images
+sudo docker run -p 8000:5000 myimage:1
+(crt+c to stop)
+
+sudo docker tag myimage:1 sandhya/dockerimage
+sudo docker lgoin -u sandhyagopal
+sudo docker push sandhya/dockerimages
+docker logout
